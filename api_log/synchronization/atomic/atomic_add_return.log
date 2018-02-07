@@ -1,0 +1,10 @@
+# insmod atomic_add_return.ko
+[   16.549354] atomic_add_return: loading out-of-tree module taints kernel.
+[   16.567546] After atomic_add_return, my atomic counter is 7
+[   16.567546] .
+[   16.567698] return ret =7
+[   16.567698] .
+[   16.567929] 
+# 
+# rmmod atomic_add_return.ko 
+[   29.374177] exit!

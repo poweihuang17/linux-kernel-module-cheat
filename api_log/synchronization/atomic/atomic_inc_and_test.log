@@ -1,0 +1,6 @@
+# insmod /atomic_inc_and_test.ko
+[  103.333389] atomic_inc_and_test: loading out-of-tree module taints kernel.
+[  103.348985] ret=0
+[  103.349088] ret=1
+# rmmod /atomic_inc_and_test.ko 
+[  111.173152] exit!

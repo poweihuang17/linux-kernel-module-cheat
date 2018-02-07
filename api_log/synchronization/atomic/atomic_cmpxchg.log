@@ -1,0 +1,10 @@
+# insmod /atomic_cmpxchg.ko
+[   84.125570] atomic_cmpxchg: loading out-of-tree module taints kernel.
+[   84.146712] After first atomic_cmpxchg, my atomic counter is 4
+[   84.146712] .
+[   84.146875] return ret = 4
+[   84.147209] After second atomic_cmpxchg, my atomic counter is 2
+[   84.147209] .
+[   84.147227] return ret = 4
+# rmmod atomic_cmpxchg.ko
+[  112.936784] exit!

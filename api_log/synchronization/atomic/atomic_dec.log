@@ -1,0 +1,8 @@
+# insmod /atomic_dec.ko
+[   19.506193] atomic_dec: loading out-of-tree module taints kernel.
+[   19.522669] After atomic_set, my atomic counter is 5
+[   19.522669] .
+# rmmod atomic_dec.ko
+[   19.522809] After atomic_dec, my atomic counter is 4
+[   19.522809] .
+[   27.113280] exit!

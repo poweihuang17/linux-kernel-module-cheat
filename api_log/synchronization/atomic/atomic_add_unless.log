@@ -1,0 +1,13 @@
+# insmod atomic_add_unless.ko
+[   22.208552] atomic_add_unless: loading out-of-tree module taints kernel.
+[   22.222051] After first atomic_add_unless, my atomic counter is 10
+[   22.222051] .
+[   22.222192] ret=0
+[   22.222192] .
+[   22.222443] 
+[   22.222641] After second atomic_add_unless, my atomic counter is 6
+[   22.222641] .
+# rmmod atomic_add_unless.ko
+[   22.222660] ret= 1
+[   22.222660] .
+[   52.795567] exit!

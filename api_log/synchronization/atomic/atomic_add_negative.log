@@ -1,0 +1,13 @@
+# insmod atomic_add_negative.ko 
+[   19.985552] atomic_add_negative: loading out-of-tree module taints kernel.
+[   19.998743] After atomic_add_negative, my atomic counter is -1
+[   19.998743] .
+[   19.998880] ret=1
+[   19.998880] .
+[   19.999099] 
+[   19.999267] After atomic_add_negative, my atomic counter is 2
+[   19.999267] .
+# rmmod atomic_add_negative.ko 
+[   19.999283] ret= 0
+[   19.999283] .
+[   34.924706] exit!
