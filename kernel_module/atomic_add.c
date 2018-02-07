@@ -11,10 +11,11 @@ atomic_t my_atomic;
 int __init atomic_add_init(void){
 	int i;
 	atomic_set( &my_atomic, 5);
-	printk("After atomic_set, my atomic counter is %d\n.", atomic_read(my_atomic));
+	printk("After atomic_set, my atomic counter is %d\n.", atomic_read(&my_atomic));
 	i=3;
 	atomic_add(i, &my_atomic);
-	printk("After atomic_add, my atomic counter is %d\n.", atomic_read(my_atomic));
+	printk("After atomic_add, my atomic counter is %d\n.", atomic_read(&my_atomic));
+	return 0;
 }
 
 void __exit atomic_add_exit(void){
