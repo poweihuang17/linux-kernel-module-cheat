@@ -1,0 +1,11 @@
+# insmod /read_seqretry.ko
+[   53.615827] read_seqretry: loading out-of-tree module taints kernel.
+[   53.628881] After seqlock_init, sequence: 0
+[   53.628881] 
+[   53.629089] After write_seqlock, sequence: 1
+[   53.629089] 
+[   53.629281] After write_sequnlcok, sequence:2
+[   53.629281] 
+[   53.629449] ret=2
+# rmmod read_seqretry
+[   67.418322] exit!

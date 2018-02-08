@@ -1,0 +1,14 @@
+# insmod /read_seqbegin.ko
+[   14.640906] read_seqbegin: loading out-of-tree module taints kernel.
+[   14.655431] After seqlock_init, sequence: 0
+[   14.655431] 
+[   14.655684] After write_seqlock, sequence: 1
+[   14.655684] 
+[   14.655886] After write_sequnlcok, sequence:2
+[   14.655886] 
+[   14.656098] ret=2
+[   14.656245] After read_seqbegin, seqlock.sequence:2
+[   14.656245] 
+# rmmod read_seqbegin.ko
+[   28.014821] exit!
+
