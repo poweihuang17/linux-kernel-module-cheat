@@ -12,15 +12,19 @@ while getopts t OPT; do
 done
 shift $(($OPTIND - 1))
 
-# Shallow clonning saves a considerable ammount of time, specially because of the linux kernel.
-# However, git submodules are buggy as usual, and this is the best way i've found to get it done:
-# https://stackoverflow.com/questions/2144406/git-shallow-submodules/47374702#47374702
-# In particular:
-# - `shallow = true` on the submodule has no effect for the non default educational branches of our submodules
-# - QEMU's submodules point to commits that are neither under branches nor tags, and so `--shallow-submodules` fails
-git submodule update --depth 1 --jobs 4 --init
-cd qemu
-git submodule update --init
+(
+  set -e
+  # Shallow clonning saves a considerable ammount of time, specially because of the linux kernel.
+  # However, git submodules are buggy as usual, and this is the best way i've found to get it done:
+  # https://stackoverflow.com/questions/2144406/git-shallow-submodules/47374702#47374702
+  # In particular:
+  # - `shallow = true` on the submodule has no effect for the non default educational branches of our submodules
+  # - QEMU's submodules point to commits that are neither under branches nor tags, and so `--shallow-submodules` fails
+  git submodule update --depth 1 --jobs 4 --init
+  cd qemu
+  git submodule update --init
+) &
+wait $! || git submodule update --init
 
 pkgs="\
 automake \
@@ -37,6 +41,7 @@ gcc-arm-linux-gnueabi \
 libgoogle-perftools-dev \
 protobuf-compiler \
 "
+
 command -v apt-get >/dev/null 2>&1 || {
     cat <<EOF
 apt-get not found. You're on your own for installing dependencies.
@@ -47,6 +52,10 @@ $pkgs
 EOF
     exit 0
 }
+
+# Without this started failing in kernel 4.15 with:
+# Makefile:932: *** "Cannot generate ORC metadata for CONFIG_UNWINDER_ORC=y, please install libelf-dev, libelf-devel or elfutils-libelf-devel".  Stop.                                                       
+pkgs="$pkgs libelf-dev"
 
 sudo apt-get update $y
 # Building SDL for QEMU in Buildroot was rejected upstream because it adds many dependencies:
