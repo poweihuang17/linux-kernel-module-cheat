@@ -1,0 +1,9 @@
+# insmod /down_write.ko
+[   24.016952] down_write: loading out-of-tree module taints kernel.
+[   24.055115] After init_rwsem, rwsem.count:0
+[   24.055361] First down_write, rwsem.count:-4294967295
+[   24.055515] After up_write, count:0
+# ls
+# ls
+# rmmod down_write.ko
+[   59.445397] exit!
