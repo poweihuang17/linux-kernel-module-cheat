@@ -38,14 +38,17 @@ Similar to atomic operation, so I skip it now.
 - If it couldn't be waken up by signal, how does it wake up?
 
 ## Read/Write Semaphore operation 
-- [ ] down\_read()
-- [ ] down\_read\_trylock()
-- [ ] down\_write()
-- [ ] down\_write\_trylock()
-- [ ] downgrade\_write()
-- [ ] init\_rwsem()
-- [ ] up\_read()
-- [ ] up\_write()
+- [x] down\_read()
+- [x] down\_read\_trylock()
+- [x] down\_write()
+- [x] down\_write\_trylock()
+- [x] downgrade\_write()
+- [x] init\_rwsem()
+- [x] up\_read()
+- [x] up\_write()
+
+### Question about rw semaphore
+- Given rwsemaphore has downgrade_write, why don't we have downgrade_write for read/write spinlock?
 
 ## Spinlock
 Need example and excercise. It doesn't have examples in the book.
@@ -53,6 +56,10 @@ Need example and excercise. It doesn't have examples in the book.
 
 ### Question about Spinlock
 - I don't understand those about irqsave...Know very few about irq...
+
+### Read/Write Spinlock
+
+### Question about Read/Write Spinlock
 
 ## Seqlock
 - [x] read\_seqbegin()
@@ -65,3 +72,4 @@ Need example and excercise. It doesn't have examples in the book.
 - Why it favors write over read?
 - Why do we need to use retry?
 - What's the pros and cons of Seqlock over spinlock? Why does jiffies use this? It has a lot of write, right? Why does jiffies still use this in this case?
+- What's the advantage or difference of Seqlock over read/write Spinlock?
