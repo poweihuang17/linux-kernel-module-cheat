@@ -16,7 +16,7 @@
 ### Comment
 - Easy to understand. It has various form of API to support syntax like while. For example, inc\_and\_test is an example.
 
-### Atomic bit operation
+## Atomic bit operation
 Similar to atomic operation, so I skip it now.
 
 ## Semaphore operation
@@ -73,3 +73,6 @@ Need example and excercise. It doesn't have examples in the book.
 - Why do we need to use retry?
 - What's the pros and cons of Seqlock over spinlock? Why does jiffies use this? It has a lot of write, right? Why does jiffies still use this in this case?
 - What's the advantage or difference of Seqlock over read/write Spinlock?
+
+## RCU
+-
