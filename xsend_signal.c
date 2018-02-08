@@ -1,5 +1,5 @@
-#include <stdlib.h>
-#include <signal.h>
+#include <stdlib>
+#include <signal>
 int main(int argc, char* argv)
 {
 	if(argc==1)

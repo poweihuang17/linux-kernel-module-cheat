@@ -21,12 +21,17 @@ Similar to atomic operation, so I skip it now.
 
 ## Semaphore operation
 - [x] down()
-- [ ] down\_interruptible()
-- [ ] down\_killable()
-- [ ] down\_timeout()
-- [ ] down\_trylock()
+- [x] down\_interruptible()
+- [x] down\_killable()
+- [x] down\_timeout()
+- [x] down\_trylock()
 - [x] sema\_init()
-- [ ] up()
+- [x] up()
+
+### Problems about Semaphore
+- I've written all of the code and could compile successfully, but I don't know how to test it. For example, I don't know how to send signal to it, and I don't know how to use the code to send signal as the book suggested. Probably had to test it later.
+
+- Now(08:33 02/08/2018), I'm not sure whether I record all the log of test results before. But I will proceed.
 
 ### Question:
 - What happen if a process goes into the state of sleep?
