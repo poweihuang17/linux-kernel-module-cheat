@@ -28,6 +28,10 @@ Similar to atomic operation, so I skip it now.
 - [x] sema\_init()
 - [ ] up()
 
+### Question:
+- What happen if a process goes into the state of sleep?
+- If it couldn't be waken up by signal, how does it wake up?
+
 ## Read/Write Semaphore operation 
 - [ ] down\_read()
 - [ ] down\_read\_trylock()
