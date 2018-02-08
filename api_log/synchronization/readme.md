@@ -1,17 +1,17 @@
 # Synchronization API exercise
 
 ## Atomic operation
--[x] atomic\_add()
--[x] atomic\_dec()
--[x] atomic\_add\_negative()
--[x] atomic\_add\_return()
--[x] atomic\_set()
--[x] atomic\_read()
--[x] atomic\_inc()
--[x] atomic\_inc\_and\_test()
--[x] atomic\_add\_unless()
--[x] atomic\_cmpxchg()
--[x] atomic\_dec\_and\_test()
+- [x] atomic\_add()
+- [x] atomic\_dec()
+- [x] atomic\_add\_negative()
+- [x] atomic\_add\_return()
+- [x] atomic\_set()
+- [x] atomic\_read()
+- [x] atomic\_inc()
+- [x] atomic\_inc\_and\_test()
+- [x] atomic\_add\_unless()
+- [x] atomic\_cmpxchg()
+- [x] atomic\_dec\_and\_test()
 
 ### Comment
 - Easy to understand. It has various form of API to support syntax like while. For example, inc\_and\_test is an example.
@@ -20,27 +20,27 @@
 Similar to atomic operation, so I skip it now.
 
 ## Semaphore operation
--[x] down()
--[ ] down\_interruptible()
--[ ] down\_killable()
--[ ] down\_timeout()
--[ ] down\_trylock()
--[x] sema\_init()
--[ ] up()
+- [x] down()
+- [ ] down\_interruptible()
+- [ ] down\_killable()
+- [ ] down\_timeout()
+- [ ] down\_trylock()
+- [x] sema\_init()
+- [ ] up()
 
 ## Read/Write Semaphore operation 
--[ ] down\_read()
--[ ] down\_read\_trylock()
--[ ] down\_write()
--[ ] down\_write\_trylock()
--[ ] downgrade\_write()
--[ ] init\_rwsem()
--[ ] up\_read()
--[ ] up\_write()
+- [ ] down\_read()
+- [ ] down\_read\_trylock()
+- [ ] down\_write()
+- [ ] down\_write\_trylock()
+- [ ] downgrade\_write()
+- [ ] init\_rwsem()
+- [ ] up\_read()
+- [ ] up\_write()
 
 ## Spinlock
 Need example and excercise. It doesn't have examples in the book.
--[ ] spinlock_irqsave?
+- [ ] spinlock_irqsave?
 
 ### Question about Spinlock
 - I don't understand those about irqsave...Know very few about irq...
