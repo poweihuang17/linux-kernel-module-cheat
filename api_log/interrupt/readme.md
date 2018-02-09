@@ -13,10 +13,16 @@
 - [ ] irq_set_irq_wake()
 - [x] remove_irq()
 - [x] request_irq()
-- [ ] request_threaded_irq()
+- [x] request_threaded_irq()
 - [x] setup_irq()
 
+### Question:
+- It seems that setup/remove and request/free are all about register interrupt.So, what's the difference.
+- What's the meaning of IRQDISABLED, IRQSHOT, IRQSHARED? Why does IRQDISABLED being disabled?
+- So, the request_threaded_irq means that it could have a kernel thread to continue working? Isn't it similar to buttom_half?
 
+### Problem:
+- Right now, I don't have an emulated device, so there is no interrupt. I couldn't test my interrupt handler.
 
 ## tasklet
 - [ ] tasklet_disable()
