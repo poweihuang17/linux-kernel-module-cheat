@@ -1,4 +1,5 @@
 # Synchronization API exercise
+檔案都在linux-kernel-module-cheat/kernel_module/底下。
 
 ## Atomic operation
 - [x] atomic\_add()
